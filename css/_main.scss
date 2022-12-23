@@ -1,0 +1,21 @@
+main {
+
+  background-color: $bg-color;
+
+  .container {
+    width: 100vw;
+    min-height: calc(100vh - $header-size-h);
+
+    .content {
+      min-height: inherit;
+      height: inherit;
+      display: grid;
+      grid-template-columns: .3fr .7fr;
+
+      .adiciona-item {
+        width: 100%;
+        position: relative;
+      }
+    }
+  }
+}

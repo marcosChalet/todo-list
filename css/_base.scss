@@ -1,0 +1,32 @@
+$bg-color: #31285E;
+$primary-color: #050317;
+$secondary-color: #21183e;
+$header-size-h: 70px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@function set-text-color($color) {
+  @if lightness($color) > 70 {
+    @return #2C3A40;
+  }
+  @else {
+    @return #EEF;
+  }
+}

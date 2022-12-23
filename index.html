@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Lista de Tarefas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <nav class="nav">
+          <a class="logo" href="#">Chalet's</a>
+          <ul class="menu">
+            <li><button>Tarefas</button></li>
+            <li><button>Sobre</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+
+        <div class="content">
+
+          <div class="adiciona-item">
+            <form id="form" method="post">
+              <label for="title">Título</label>
+              <input id="title" type="text" name="title" placeholder="Insira um título">
+              <label>Assunto</label>
+              <textarea id="assunto" rows="4" cols="50" placeholder="Faça sua anotação aqui..."></textarea>
+              <input id="submit" type="submit" value="Adicionar">
+            </form>
+          </div>
+
+          <div id="todo-list" class="itens">
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+
+  <script src="https://kit.fontawesome.com/f5b21db9c5.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  </body>
+</html>

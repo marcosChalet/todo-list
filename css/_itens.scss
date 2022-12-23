@@ -1,0 +1,51 @@
+.itens {
+  width: inherit;
+  margin: auto 2em;
+  color: set-text-color($primary-color);
+  height: 450px;
+  overflow: scroll;
+
+  .item {
+    // flex pattern
+    @extend .flex-between;
+
+    background-color: lighten($secondary-color, 4);
+    color: set-text-color($secondary-color);
+    margin-bottom: 1em;
+    border-radius: .8em;
+    padding: 0 1em;
+    height: 4.2em;
+    min-height: 4.2em;
+    overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($secondary-color, 2);
+    }
+
+    h1, p {
+      font-size: 1.4em;
+    }
+
+    .icons-item {
+      // flex pattern
+      @extend .flex-between;
+      width: 5em;
+      height: 100%;
+
+      .icon {
+        // flex pattern
+        @extend .flex-center;
+        width: 1.4em;
+        height: 2em;
+        font-size: 1.4em;
+        color: set-text-color($secondary-color);
+        transition: .2s ease;
+
+        &:hover {
+          font-size: 1.7em;
+        }
+      }
+    }
+  }
+}

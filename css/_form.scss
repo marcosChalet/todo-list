@@ -1,0 +1,54 @@
+form {
+
+  $width-area: 90%;
+
+  // flex pattern
+  @extend .flex-center;
+  flex-direction: column;
+  color: set-text-color($secondary-color);
+  background-color: $secondary-color;
+  width: inherit;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+
+  label {
+    width: $width-area;
+    font-size: 1.5em;
+  }
+
+  input:not(:last-child), textarea {
+    color: set-text-color($secondary-color);
+    width: $width-area;
+    margin-bottom: 2em;
+    background-color: transparent;
+    border: 1px solid #000;
+    background-color: scale-color($secondary-color, $lightness: 7%);
+    outline: none;
+    font-size: 1.2em;
+    padding-left: .5em;
+  }
+
+  input:not(:last-child) {
+    height: 3em;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  #submit {
+    @extend .text-style;
+    background-color: $secondary-color;
+    color: set-text-color($secondary-color);
+    border: none;
+    width: 5.5em;
+    height: 2.3em;
+
+    &:hover {
+      cursor: pointer;
+      background-color: scale-color($secondary-color, $lightness: -15%);
+    }
+  }
+
+}

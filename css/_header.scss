@@ -1,0 +1,63 @@
+$font-header-size: 2em;
+
+.text-style {
+  color: set-text-color($primary-color);
+  font-size: $font-header-size;
+  font-weight: bold;
+}
+
+header {
+
+  background-color: $primary-color;
+  height: $header-size-h;
+  width: 100vw;
+
+  .content {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .nav {
+    // flex pattern
+    @extend .flex-between;
+
+    height: 100%;
+    width: 100%;
+    padding: 0 1.4em;
+    text-transform: uppercase;
+
+    .logo {
+      @extend .text-style;
+      text-decoration: none;
+    }
+
+    .menu {
+      height: 100%;
+    }
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      height: 100%;
+    }
+
+    button {
+
+      @extend .text-style;
+      background-color: transparent;
+      border: none;
+
+      text-transform: uppercase;
+      height: 100%;
+      width: 5em;
+
+      &:hover {
+        background-color: lighten($primary-color, 3);
+        cursor: pointer;
+      }
+    }
+  }
+}
