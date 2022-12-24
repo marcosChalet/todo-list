@@ -18,8 +18,6 @@
 
     // flex pattern
     @extend .flex-between;
-
-    // background-color: lighten($secondary-color, 4);
     background-color: set-item-color($bg-color);
     color: set-text-color($bg-color);
 
@@ -42,17 +40,20 @@
     .icons-item {
       // flex pattern
       @extend .flex-between;
-      width: 5em;
+      width: 5.5em;
       height: 100%;
+      position: relative;
 
       .icon {
         // flex pattern
         @extend .flex-center;
-        width: 1.4em;
-        height: 2em;
+        width: 100%;
+        height: 100%;
         font-size: 1.4em;
         color: set-text-color($secondary-color);
         transition: .2s ease;
+        flex-grow: 1;
+        flex-basis: 0;
 
         &:hover {
           font-size: 1.7em;
