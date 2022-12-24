@@ -1,16 +1,28 @@
 .itens {
   width: inherit;
   margin: auto 2em;
-  color: set-text-color($primary-color);
+  color: set-text-color($bg-color);
   height: 450px;
   overflow: scroll;
 
   .item {
+
+    @function set-item-color($color) {
+      @if lightness($color) > 70 {
+        @return darken($color, 7%);
+      }
+      @else {
+        @return lighten($color, 7%);
+      }
+    }
+
     // flex pattern
     @extend .flex-between;
 
-    background-color: lighten($secondary-color, 4);
-    color: set-text-color($secondary-color);
+    // background-color: lighten($secondary-color, 4);
+    background-color: set-item-color($bg-color);
+    color: set-text-color($bg-color);
+
     margin-bottom: 1em;
     border-radius: .8em;
     padding: 0 1em;
